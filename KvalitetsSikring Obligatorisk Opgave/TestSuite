@@ -1,0 +1,141 @@
+TestSuite for Roman Numeral Calculator
+
+Test 1 (Invalid character)
+
+	Input: 
+			A: 0
+			B: I
+	
+	Output: 
+			C:  INVALD CHARACTER
+
+
+Test 2 ()
+
+	Input: 
+			A: I
+			B: II
+	
+	Output: 
+			C: III
+
+
+Test 3 ()
+
+	Input: 
+			A: III
+			B: II
+	
+	Output: 
+			C: V
+
+
+Test 4 ()
+
+	Input: 
+			A: III
+			B: III
+	
+	Output: 
+			C: VI
+
+
+Test 5 ()
+
+	Input: 
+			A: II
+			B: V
+	
+	Output: 
+			C: VII
+
+
+Test 6 ()
+
+	Input: 
+			A: V
+			B: V
+	
+	Output: 
+			C: X
+
+
+Test 7 ()
+
+	Input: 
+			A: V
+			B: XI
+	
+	Output: 
+			C: XVI
+
+
+Test 8 ()
+
+	Input: 
+			A: XXXX
+			B: VVII
+	
+	Output: 
+			C: LII
+
+
+Test 9 ()
+
+	Input: 
+			A: LVI
+			B: XV
+	
+	Output: 
+			C: LXXI
+
+
+Test 10 ()
+
+	Input: 
+			A: LL
+			B: XXXXVVVIII
+	
+	Output: 
+			C: CLVIII
+
+
+Test 11 ()
+
+	Input: 
+			A: CCCCL
+			B: LLLLXXVVVII
+	
+	Output: 
+			C: DCLXXXVII
+
+
+Test 12 ()
+
+	Input: 
+			A: DCCLXXXVIII
+			B: DCCCLLXXXVVIII
+	
+	Output: 
+			C: MDCCXXXI
+
+
+Test 13 ()
+
+	Input: 
+			A: MMDCCLXVII
+			B: MDCLXXVI
+	
+	Output: 
+			C: MMMMCCCCXXXXI
+
+
+Test 14 (Result is out of range)
+
+	Input: 
+			A: MMMMDCCCCLXXXXVIIII
+			B: II
+	
+	Output: 
+			C: INVALID
+
