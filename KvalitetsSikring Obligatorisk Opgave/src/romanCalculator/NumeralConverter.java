@@ -1,3 +1,15 @@
+/*
+ * This class is responsible for processing the Numerals.
+ * 
+ * The first method processes the two incoming Numerals (Through the other classes),
+ * and returns the outgoing Numeral after processing.
+ * 
+ * The second method is a service method for the first method.
+ * It is responsible for conversions between Numerals (Converting "IIIII" to "V" etc.).
+ * 
+ * 
+ */
+
 package romanCalculator;
 
 public class NumeralConverter 
@@ -15,7 +27,7 @@ public class NumeralConverter
 	public String mergeNumerals(String a, String b)
 	{   
 		NumeralCheck numCh = new NumeralCheck();
-		if(numCh.checkNumerals(a, b) == "True")
+		if(numCh.checkNumerals(a, b))
 		{
 			if(numCh.numeralOrder(a, b))
 			{
@@ -54,13 +66,15 @@ public class NumeralConverter
 	{
 
 		return raw.toString()
-				.replaceAll("IIIII", "V")
-				.replaceAll("VV", "X")
-				.replaceAll("XXXXX", "L")
-				.replaceAll("LL", "C")
-				.replaceAll("CCCCC", "D")
-				.replaceAll("DD", "M");
+								.replaceAll("IIIII", "V")
+								.replaceAll("VV", "X")
+								.replaceAll("XXXXX", "L")
+								.replaceAll("LL", "C")
+								.replaceAll("CCCCC", "D")
+								.replaceAll("DD", "M");
 	}
+	
+	
 	
 	
 	public String getRawResult() 

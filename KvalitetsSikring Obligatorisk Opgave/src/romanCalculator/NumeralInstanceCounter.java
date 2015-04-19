@@ -1,3 +1,13 @@
+/*
+ * This class contains 3 methods.
+ * The first two methods splits an incomming String into charArrays (an array of characters). 
+ * (The first method handles Numeral a, and the second method handles Numeral b).
+ * After the Strings are split into charArrays, they are sorted, and ultimately stored as instance-variables in Logic();
+ * 
+ * The last method is used to retrieve the two incomming Roman Numerals as a raw (unformatted) version of the output result.
+ * 
+ */
+
 package romanCalculator;
 
 public class NumeralInstanceCounter 
@@ -18,7 +28,6 @@ public class NumeralInstanceCounter
 		for(int i=0; i<charArraya.length; i++)
 		{
 			if(charArraya[i] == 'M' )
-
 			{
 				String s = l.getMCount() + "M";
 				l.setMCount(s);
@@ -59,12 +68,6 @@ public class NumeralInstanceCounter
 				String s = l.getICount() + "I";
 				l.setICount(s);
 			}
-			
-//			else
-//			{
-//				System.out.println("A [ " + a + " ] is an Invalid Numeral");
-//				break;
-//			}
 	
 		}
 		
@@ -119,12 +122,6 @@ public class NumeralInstanceCounter
 				String s = l.getICount() + "I";
 				l.setICount(s);
 			}
-			
-//			else
-//			{
-//				System.out.println("B [ " + b + " ] is an Invalid Numeral");
-//				break;
-//			}
 	
 		}
 	}

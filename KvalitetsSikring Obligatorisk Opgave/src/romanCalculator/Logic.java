@@ -1,3 +1,8 @@
+/*
+ * This class is used to merge the two incomming Roman Numerals into one single (Raw version) of the output result.
+ */
+
+
 package romanCalculator;
 
 public class Logic 

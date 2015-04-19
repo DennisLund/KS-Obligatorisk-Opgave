@@ -2,7 +2,6 @@ package testSuite;
 
 import static org.junit.Assert.*;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import romanCalculator.*;
@@ -10,17 +9,10 @@ import romanCalculator.*;
 
 public class test 
 {
-//	NumeralConverter numConv;
 	
 	NumeralConverter numConv = new NumeralConverter();
-	
-	@Before
-	public void initialize() throws Exception 
-	{
-//		NumeralConverter numConv = new NumeralConverter();
-	}
-	
 
+	
 	@Test
 	public void test1_InvalidNumber() 
 	{
@@ -104,5 +96,28 @@ public class test
 	{
 		assertEquals("Invalid Numeral. Max Numeral value allowed is: MMMMDCCCCLXXXXVIIII", numConv.mergeNumerals("MMMMDCCCCLXXXXVIIII", "II"));
 	}
+	
+	
+
+//				The following tests have been added upon further reflections
+
+	
+	
+	@Test
+	public void test15_WrongFormat() 
+	{
+		assertEquals("Numerals are in the wrong order. Correct order of numerals are: M, D, C, L, X, V, I", numConv.mergeNumerals("MDCCCCLXXXXVIIII", "IMI"));
+	}
+	
+	
+	@Test
+	public void test16_MotherTest() 
+	{
+		assertEquals("MMMM", numConv.mergeNumerals("MMMDCCCCLXXXXVIIII", "I"));
+	}
+	
+	
+	
+	
 
 }

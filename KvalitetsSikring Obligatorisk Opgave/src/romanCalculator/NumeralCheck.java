@@ -1,16 +1,26 @@
+/*
+ * This class ensures that both incoming and outgoing Numerals are valid, and correctly formatted.
+ * It contains four methods:
+ * 
+ * The first method checks the incoming Numerals for invalid characters.
+ * The second method is a service method for the first method.
+ * The third method ensures that the outgoing Numeral does not exceed the maximum value specified in the assignment.
+ * The fourth method ensures that the incoming Numerals are correctly formatted (that the Numerals appear in the correct order(descending in value)).
+ */
+
 package romanCalculator;
 
 public class NumeralCheck 
 {
-	private int aCheck = 0;
-	private int bCheck = 0;
+	private String aCheck = "";
+	private String bCheck = "";
 	
 	public NumeralCheck()
 	{
 		
 	}
 	
-	public String checkNumerals(String a, String b)
+	public Boolean checkNumerals(String a, String b)
 	{
 		char[] charArraya = a.toCharArray();
 		for(int i=0; i<charArraya.length; i++)
@@ -29,7 +39,7 @@ public class NumeralCheck
 								{
 									if(charArraya[i] != 'I')
 									{
-										aCheck++;
+										aCheck+= "I";
 										
 									}
 								}
@@ -57,7 +67,7 @@ public class NumeralCheck
 								{
 									if(charArrayb[i] != 'I')
 									{
-										bCheck++;
+										bCheck+= "I";
 										
 									}
 								}
@@ -73,14 +83,14 @@ public class NumeralCheck
 	}
 	
 	
-	public String validityCheck()
+	public Boolean validityCheck()
 	{
-		if(aCheck == 0 && bCheck == 0)
+		if(aCheck == "" && bCheck == "")
 		{
-			return "True";
+			return true;
 		}
 		else
-			return "False";
+			return false;
 	}
 	
 	
