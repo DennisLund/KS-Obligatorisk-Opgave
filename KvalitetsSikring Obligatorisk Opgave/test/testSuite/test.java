@@ -5,17 +5,19 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import romanCalculator.NumeralConverter;
+import romanCalculator.*;
 
 
 public class test 
 {
-	NumeralConverter numConv;
+//	NumeralConverter numConv;
+	
+	NumeralConverter numConv = new NumeralConverter();
 	
 	@Before
 	public void initialize() throws Exception 
 	{
-		NumeralConverter numConv = new NumeralConverter();
+//		NumeralConverter numConv = new NumeralConverter();
 	}
 	
 
