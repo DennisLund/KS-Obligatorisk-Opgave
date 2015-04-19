@@ -24,7 +24,7 @@ public class test
 	@Test
 	public void test1_InvalidNumber() 
 	{
-		assertEquals("Result: One or both inputs is not a Valid Roman Numeral", numConv.mergeNumerals("0", "I"));
+		assertEquals("One or both inputs is not a Valid Roman Numeral", numConv.mergeNumerals("0", "I"));
 	}
 
 	@Test
@@ -96,7 +96,7 @@ public class test
 	@Test
 	public void test13_MMDCCLXVIIandMDCLXXVIequalsMMMMCCCCXXXXI() 
 	{
-		assertEquals("MMMMCCCCXXXXI", numConv.mergeNumerals("MMDCCLXVII", "MDCLXXVI"));
+		assertEquals("MMMMCCCCXXXXIII", numConv.mergeNumerals("MMDCCLXVII", "MDCLXXVI"));
 	}
 
 	@Test
